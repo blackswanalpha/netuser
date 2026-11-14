@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "NetUser",
+  "version": "0.1.0",
+  "identifier": "com.netuser.desktop",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "NetUser",
+        "width": 1100,
+        "height": 800,
+        "minWidth": 720,
+        "minHeight": 560,
+        "decorations": false,
+        "maximizable": false,
+        "transparent": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "deb",
+      "rpm",
+      "appimage"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "publisher": "blackswanalpha",
+    "homepage": "https://github.com/blackswanalpha/netuser",
+    "category": "Utility",
+    "shortDescription": "See which devices are on your WiFi",
+    "longDescription": "NetUser lists the devices connected to your WiFi network, lets you name them, and shows live signal strength and throughput. Linux only, no root required.",
+    "linux": {
+      "deb": {
+        "depends": [
+          "iproute2",
+          "xdg-utils"
+        ],
+        "recommends": [
+          "network-manager",
+          "nmap-common",
+          "wl-clipboard | xclip"
+        ]
+      },
+      "rpm": {
+        "depends": [
+          "iproute",
+          "xdg-utils"
+        ]
+      }
+    }
+  }
+}
