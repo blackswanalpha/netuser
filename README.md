@@ -1,8 +1,33 @@
 <p align="center"><img src="assets/logo.svg" width="96" alt="NetUser logo"></p>
 
-# NetUser
+<h1 align="center">NetUser</h1>
 
-A Linux desktop app that shows which devices are on your WiFi. Name devices, see who is online or recently away, and check live signal strength and throughput. No root required.
+<p align="center"><strong>See every device on your WiFi, right from your Linux desktop.</strong></p>
+
+<p align="center">
+  <a href="https://github.com/blackswanalpha/netuser/releases/latest"><img src="https://img.shields.io/github/v/release/blackswanalpha/netuser?color=f1521f&label=release" alt="Latest release"></a>
+  <a href="https://github.com/blackswanalpha/netuser/releases"><img src="https://img.shields.io/github/downloads/blackswanalpha/netuser/total?color=f1521f" alt="Downloads"></a>
+  <img src="https://img.shields.io/badge/platform-Linux-333?logo=linux&logoColor=white" alt="Linux">
+  <img src="https://img.shields.io/badge/packages-deb%20%7C%20rpm%20%7C%20AppImage-555" alt="deb, rpm, AppImage">
+  <img src="https://img.shields.io/badge/Rust-2021-b7410e?logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/Tauri-v2-24c8db?logo=tauri&logoColor=white" alt="Tauri v2">
+  <img src="https://img.shields.io/badge/root-not%20required-1f9d57" alt="No root required">
+</p>
+
+NetUser lists every phone, laptop, TV and smart plug connected to your network, with its IP, MAC address and vendor. Name your devices once and the names stick across IP changes. When a device goes quiet you see it marked as away. A second screen shows how your own connection is doing: signal strength, link rate, band, channel and live traffic.
+
+<p align="center"><img src="assets/screenshots/devices.png" width="820" alt="Devices screen: stat cards and a table of connected devices with names, IPs, MACs, vendors and status"></p>
+<p align="center"><img src="assets/screenshots/network.png" width="820" alt="Network screen: signal strength, download and upload traffic, link rate, channel and data totals"></p>
+<p align="center"><sub>Screenshots use demo data.</sub></p>
+
+## Features
+
+- **Fast discovery:** finds devices in about 5 seconds and rescans every minute. No root, no port scanning.
+- **Device names:** label devices like "Tyra's phone". Names are keyed by MAC, so they survive IP changes and restarts.
+- **Online and Away:** a device that misses a scan stays listed as Away for 3 minutes, so phones in power-save don't flicker in and out.
+- **Vendor lookup:** shows the maker of each device and flags private (randomized) MAC addresses.
+- **Network view:** signal in dBm with a quality rating, SSID, band, channel, link rate, live download and upload, and totals since connect.
+- **Block helper:** copies a device's MAC and opens your router's admin page so you can block it there.
 
 ## Install
 
